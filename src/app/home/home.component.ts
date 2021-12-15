@@ -110,6 +110,7 @@ export class HomeComponent implements OnInit {
     this.current = parseInt(weight);
     this.lost = this.start - this.current;
     this.lose = this.current - this.target;
+    this.calories = this.lose * 3500;
   }
 
   //goals feature
