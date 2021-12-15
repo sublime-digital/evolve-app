@@ -1,40 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { CrmComponent } from './crm/crm.component';
-import { UniComponent } from './uni/uni.component';
-import { SupportComponent } from './support/support.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PortalComponent } from './portal/portal.component';
-import { IntranetComponent } from './intranet/intranet.component';
-import { ProjectmanagementComponent } from './projectmanagement/projectmanagement.component';
-import { BlogComponent } from './blog/blog.component';
-import { SupportformComponent } from './supportform/supportform.component';
-import { SupportopenComponent } from './supportopen/supportopen.component';
-import { SupportclosedComponent } from './supportclosed/supportclosed.component';
+import { HomeComponent } from './home/home.component';
+import { FoodsComponent } from './foods/foods.component';
+import { SportsComponent } from './sports/sports.component';
+import { LibraryComponent } from './library/library.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
-    CrmComponent,
-    UniComponent,
-    SupportComponent,
     DashboardComponent,
-    PortalComponent,
-    IntranetComponent,
-    ProjectmanagementComponent,
-    BlogComponent,
-    SupportformComponent,
-    SupportopenComponent,
-    SupportclosedComponent
+    HomeComponent,
+    FoodsComponent,
+    SportsComponent,
+    LibraryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
