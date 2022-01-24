@@ -10,6 +10,7 @@ import { FoodsComponent } from './foods/foods.component';
 import { SportsComponent } from './sports/sports.component';
 import { LibraryComponent } from './library/library.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { TipsComponent } from './tips/tips.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     HomeComponent,
     FoodsComponent,
     SportsComponent,
-    LibraryComponent
+    LibraryComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,
