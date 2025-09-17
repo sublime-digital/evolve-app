@@ -20,62 +20,24 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "www",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "assets"
-              },
-              {
-                "glob": "**/*.svg",
-                "input": "node_modules/bootstrap-icons/icons",
-                "output": "./assets/icons/"
-              },
-              {
-                "glob": "**/*.png",
-                "input": "node_modules/echarts/dist",
-                "output": "./assets/echarts/"
-              },
-              {
-                "glob": "**/*.jpg",
-                "input": "node_modules/echarts/dist",
-                "output": "./assets/echarts/"
-              },
-              {
-                "glob": "**/*.gif",
-                "input": "node_modules/echarts/dist",
-                "output": "./assets/echarts/"
-              },
-              {
-                "glob": "**/*.json",
-                "input": "src/",
-                "output": "./"
-              }
-            ],
-            "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/theme/variables.less",
-              "src/global.scss"
-            ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            "outputPath": "dist/your-app"          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "evolve-app:build"
           },
           "configurations": {
-            "production": {
-            },
             "development": {
+              "browserTarget": "evolve-app:build:development"
+            },
+            "production": {
+              "browserTarget": "evolve-app:build:production"
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         }
-    }
+      }
   }
 }
 }
