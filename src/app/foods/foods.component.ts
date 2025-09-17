@@ -6,6 +6,7 @@ interface Goal {
 
 @Component({
   selector: 'app-foods',
+  standalone: false,
   templateUrl: './foods.component.html',
   styleUrls: ['./foods.component.less']
 })
