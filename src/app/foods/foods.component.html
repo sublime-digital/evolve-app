@@ -1,1 +1,14 @@
-<p>foods works!</p>
+<div class="card">
+  <div class="card-header">
+    <h2>Today's Goals</h2>
+  </div>
+  <div class="card-body" style="min-height: 150px;max-height: 200px;">
+    <ul>
+      <li *ngFor = "let line of goalData let i = index">
+          {{line.goal}}
+      </li>
+    </ul>
+      <input type='text'[(ngModel)]='goal' placeholder='Goal'>
+      <p><button type="button" class="btn btn-info" (click)='handleGoalClick()'>Add</button>
+  </div>
+</div>
