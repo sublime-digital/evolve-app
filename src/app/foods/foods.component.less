@@ -14,3 +14,29 @@
   color: beige;
   border: 3px solid black;
 }
+
+.advert {
+  color: #ffe9d5;
+  text-align: center;
+  width: 540px;
+  height: 400px;
+  background-color: rgb(109, 26, 26);
+}
+
+#ad {
+  animation-duration: 3s; /* Duration of the animation */
+  animation-name: slide-from-top; /* Name of the @keyframes rule */
+  animation-timing-function: ease-out; /* Animation speed curve */
+  animation-fill-mode: forwards; /* Element retains the styles from the last keyframe */
+}
+
+@keyframes slide-from-top {
+  from {
+    transform: translateY(-20%); /* Start off-screen to the left */
+    opacity: 0; /* Optionally start transparent */
+  }
+  to {
+    transform: translateY(0); /* End at its natural position */
+    opacity: 1; /* Optionally end fully opaque */
+  }
+}

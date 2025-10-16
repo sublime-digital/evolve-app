@@ -14,8 +14,6 @@ export class FoodsComponent implements OnInit {
 
   goal : string = "";
   goalData: Array<Goal> = [
-    {goal: 'Log my meals'},
-    {goal: 'Eat a salad today'}
   ];
 
   constructor() { }

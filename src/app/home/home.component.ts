@@ -72,9 +72,9 @@ export class HomeComponent implements OnInit {
 
   //section 2 data
 
-  start = 260;
-  current = 234;
-  target = 180;
+  start = 190;
+  current = 170;
+  target = 160;
   lost = this.start - this.current;
   lose = this.current - this.target;
   calories = this.lose * 3500;
@@ -92,8 +92,11 @@ export class HomeComponent implements OnInit {
   date : string = "";
   weight : string = "";
   weightData: Array<Weight> = [
-    {date: '12/13/21', weight: '234', },
-    {date: '12/14/21', weight: '233', }
+    {date: '10/1/25', weight: '190', },
+    {date: '10/2/25', weight: '185', },
+    {date: '10/3/25', weight: '180', },
+    {date: '10/4/25', weight: '175', },
+    {date: '10/5/25', weight: '170', }
   ];
 
   handleClick() {
@@ -118,7 +121,7 @@ export class HomeComponent implements OnInit {
 
   goal : string = "";
   goalData: Array<Goal> = [
-    {goal: 'eat a salad'}
+    {goal: 'Cereal & milk'}
   ];
 
   handleGoalClick() {

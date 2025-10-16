@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    <h2>Today's Goals</h2>
+    <h2>Daily food log</h2>
   </div>
   <div class="card-body" style="min-height: 150px;max-height: 200px;">
     <ul>
@@ -8,7 +8,16 @@
           {{line.goal}}
       </li>
     </ul>
-      <input type='text'[(ngModel)]='goal' placeholder='Goal'>
-      <p><button type="button" class="btn btn-info" (click)='handleGoalClick()'>Add</button>
+      <input type='text'[(ngModel)]='goal' placeholder='What did you eat?'>
+      <p><button type="button" class="btn btn-info" (click)='handleGoalClick()'>Log it</button>
+  </div>
+</div>
+<p></p>
+<div class="card advert">
+  <div class="card-header">
+    <h2>Advertisements</h2>
+  </div>
+  <div class="card-body" style="width: 450px; max-height: 300px;">
+    <img src="../../assets/ad.png" width="500px" alt="" id="ad">
   </div>
 </div>
