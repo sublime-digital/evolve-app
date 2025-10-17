@@ -1,12 +1,12 @@
 .card {
   margin-top: 20px;
-  background-color: beige;
-  color: brown;
+  background-color: rgb(255, 184, 69);
+  color: rgb(255, 223, 223);
 }
 
 .card li {
   list-style: none;
-  color: brown;
+  color: rgb(254, 213, 213);
 }
 
 .card button {
@@ -16,18 +16,40 @@
   border: 3px solid black;
 }
 
-.advert {
-  color: #ffe9d5;
+.watermeter {
+  font-size: 35px;
+  color: #d5f2f6;
   text-align: center;
   width: 450px;
-  height: 330px;
-  background-color: rgb(109, 26, 26);
+  height: 150px;
+  background-color: rgb(2, 19, 212);
+}
+
+.bi-plus-square {
+  padding-left: 30px;
+  font-size: 25px;
+  color: white;
+}
+
+.nutritiontips {
+  color: #e8f5e2;
+  text-align: center;
+  width: 450px;
+  height: 150px;
+  background-color: rgb(34, 212, 2);
 }
 
 #ad {
   animation-duration: 3s; /* Duration of the animation */
   animation-name: slide-from-top; /* Name of the @keyframes rule */
   animation-timing-function: ease-out; /* Animation speed curve */
+  animation-fill-mode: forwards; /* Element retains the styles from the last keyframe */
+}
+
+#watermeter {
+  animation-duration: 1s; /* Duration of the animation */
+  animation-name: slide-from-right; /* Name of the @keyframes rule */
+  animation-timing-function: ease-in; /* Animation speed curve */
   animation-fill-mode: forwards; /* Element retains the styles from the last keyframe */
 }
 
@@ -38,6 +60,17 @@
   }
   to {
     transform: translateY(0); /* End at its natural position */
+    opacity: 1; /* Optionally end fully opaque */
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(-5%); /* Start off-screen to the left */
+    opacity: 0; /* Optionally start transparent */
+  }
+  to {
+    transform: translateX(0); /* End at its natural position */
     opacity: 1; /* Optionally end fully opaque */
   }
 }

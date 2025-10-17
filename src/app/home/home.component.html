@@ -6,19 +6,21 @@
         <div class="col-md-3">
           <div class="card card__overlay">
           <div class="card-header">
-            <h1 class="h2">Enter Today's Weight</h1>
+            <h5 class="h5">Enter Today's Weight</h5>
           </div>
-          <div class="card-body" style="min-height: 150px;max-height: 200px;">
+          <div class="card-body" style="min-height: 120px;max-height: 140px;">
             <input type='text'[(ngModel)]='date' placeholder='Date'>
             <input type='text'[(ngModel)]='weight' placeholder="Today's Weight">
             <p></p>
             <button type="button" class="btn btn-info" (click)='handleClick()'>Add</button>
           </div>
           </div>
+
           <p></p>
+
           <div class="card">
             <div class="card-header">
-              <h2>Weight Data</h2>
+              <h5>Weight Data</h5>
             </div>
             <div class="card-body" style="min-height: 150px;max-height: 150px;">
               Start:
@@ -49,13 +51,24 @@
               <button type="button" class="btn btn-primary">{{ years }}</button> -->
             </div>
           </div>
+
+          <p></p>
+
+          <div class="card advert">
+            <div class="card-header">
+              <h5 class="h5">Advertisement</h5>
+            </div>
+            <div class="card-body" style="min-height: 150px;max-height: 100px;">
+              <img src="../../assets/ad.png" width="240px" alt="advertisement for tiffin service" id="ad">
+            </div>
+          </div>
         </div>
 
 
         <div class="col-md-4">
           <div class="card">
             <div class="card-header">
-              <h2>Weight Grid</h2>
+              <h5>Weight Grid</h5>
             </div>
               <div class="card-body" style="min-height: 300px;max-height: 450px;">
                 <table class="table table-striped table-sm" style="max-height: 400px;">
@@ -93,13 +106,15 @@
                 </table>
               </div>
             </div>
+
             <p></p>
+
           <div class="card">
             <div class="card-header">
-              <h1 class="h2">Fitness Tip of the Day</h1>
+              <h5 class="h5">Fitness Tip of the Day</h5>
             </div>
             <div class="card-body" style="min-height: 150px;max-height: 100px;">
-              <h3>Make sure to go on a walk today</h3>
+              <h5>Don't give up on your dreams</h5>
             </div>
             </div>
         </div>
@@ -108,7 +123,7 @@
         <div class="col-lg-5">
           <div class="card">
             <div class="card-header">
-              <h1 class="h2">Weight Chart</h1>
+              <h5 class="h5">Weight Chart</h5>
             </div>
             <div class="card-body" style="min-height: 300px;max-height: 700px;">
               <p><div echarts [options]="options" class="demo-chart"></div>
@@ -133,7 +148,7 @@
       <div class="col-md-5">
         <!--<div class="card">
         <div class="card-header">
-          <h2>Food List</h2>
+          <h5>Food List</h5>
         </div>
         <div class="card-body" style="min-height: 150px;max-height: 200px;">
           <ul>

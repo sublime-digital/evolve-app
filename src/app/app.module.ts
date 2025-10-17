@@ -7,7 +7,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { FoodsComponent } from './foods/foods.component';
-import { SportsComponent } from './sports/sports.component';
+import { SettingsComponent } from './settings/settings.component';
 import { LibraryComponent } from './library/library.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { TipsComponent } from './tips/tips.component';
@@ -19,7 +19,7 @@ import { TipsComponent } from './tips/tips.component';
     DashboardComponent,
     HomeComponent,
     FoodsComponent,
-    SportsComponent,
+    SettingsComponent,
     LibraryComponent,
     TipsComponent
   ],
