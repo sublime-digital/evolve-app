@@ -92,7 +92,7 @@ export class HomeComponent implements OnInit {
   date : string = "";
   weight : string = "";
   weightData: Array<Weight> = [
-    {date: '1/1/26', weight: '2000', },
+    {date: '1/1/26', weight: '200', },
   ];
 
   handleClick() {
