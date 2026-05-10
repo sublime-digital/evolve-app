@@ -14,12 +14,12 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/foods">F O O D L O G</a>
           </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/tips">F I T N E S S</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/library">S U B S C R I P T I O N</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link active"
+              style="cursor: pointer;"
+              data-bs-toggle="modal"
+              data-bs-target="#subModal">L I B R A R Y</a>
+          </li>
         <li class="nav-item d-flex">
           <a class="nav-link active" aria-current="page" routerLink="/settings">
             <i class="bi bi-gear"></i>
@@ -32,6 +32,23 @@
 
 <router-outlet>
 </router-outlet>
+
+<div class="modal fade" id="subModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-light text-dark border-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title">Upgrade to EVOLVE Pro</h5>
+        <button type="button" class="btn-close btn-close-blue" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Unlock our entire catalogue of fitness videos with a premium membership</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary w-100" style="background-color:brown">View Plans</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--
 <nav class="navbar navbar-light bg-dark p-4">
