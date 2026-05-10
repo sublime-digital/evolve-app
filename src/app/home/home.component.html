@@ -3,7 +3,7 @@
     <p>
     <div class="row">
 
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="card card__overlay">
           <div class="card-header">
             <h5 class="h5">Enter Today's Weight</h5>
@@ -18,54 +18,22 @@
 
           <p></p>
 
-          <div class="card">
-            <div class="card-header">
-              <h5>Weight Data</h5>
-            </div>
-            <div class="card-body" style="min-height: 150px;max-height: 150px;">
-              Start:
-              <button type="button" class="btn btn-info">{{ start }}</button>
-              <p><p>Current:
-              <button type="button" class="btn btn-warning">{{ current }}</button>
-              Target:
-              <button type="button" class="btn btn-success">{{ target }}</button>
-              <p><p>Lost so far:
-              <button type="button" class="btn btn-danger">{{ lost }}</button>
-              Left to lose:
-              <button type="button" class="btn btn-danger">{{ lose }}</button>
-              <!--<p><p>Calories left to burn:
-              <button type="button" class="btn btn-info">{{ calories | number }}</button>
-              Calories burned so far:
-              <button type="button" class="btn btn-success">{{ progress | number }}</button>
-              <p>Miles to Run:
-              <button type="button" class="btn btn-info">{{ miles | number }}</button>
-              Number of 5-Mile Runs:
-              <button type="button" class="btn btn-primary">{{ fiveruns }}</button>
-              Number of 10-Mile Runs:
-              <button type="button" class="btn btn-primary">{{ tenruns }}</button>
-              <p>5 runs per week will take this many weeks:
-              <button type="button" class="btn btn-success">{{ weeks }}</button>
-              months:
-              <button type="button" class="btn btn-info">{{ months }}</button>
-              years:
-              <button type="button" class="btn btn-primary">{{ years }}</button> -->
-            </div>
-          </div>
-
-          <p></p>
-
           <div class="card advert">
             <div class="card-header">
               <h5 class="h5">Advertisement</h5>
             </div>
-            <div class="card-body" style="min-height: 120px;max-height: 100px;">
-              <img src="../../assets/fitness-ad.png" width="87px" alt="advertisement for tiffin service" id="ad">
+                        <div>
+              <a [href]="currentLink()">
+                <div class="image-frame">
+                  <img [src]="currentImage()" alt="Adverts" class="fade-in">
+                </div>
+              </a>
             </div>
           </div>
         </div>
 
 
-        <div class="col-md-4">
+        <div class="col-md-5">
           <div class="card">
             <div class="card-header">
               <h5>Weight Grid</h5>
@@ -120,7 +88,7 @@
         </div>
 
 
-        <div class="col-lg-5">
+        <div class="col-lg-3">
           <div class="card">
             <div class="card-header">
               <h5 class="h5">Weight Chart</h5>

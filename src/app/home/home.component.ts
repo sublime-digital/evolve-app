@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, computed, OnDestroy, OnInit, signal } from '@angular/core';
 
 interface Weight {
   date: string,
@@ -16,7 +16,46 @@ interface Goal {
   styleUrls: ['./home.component.less']
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
+
+    private images = [
+      '../../assets/adverts/advert001.png',
+      '../../assets/adverts/advert002.png',
+      '../../assets/adverts/advert003.png',
+      '../../assets/adverts/advert004.png',
+      '../../assets/adverts/advert005.png',
+    ];
+
+  private links = [
+      "/",
+      "/",
+      "/",
+      "/",
+      "/",
+    ];
+
+        // 2. State management with signals
+    private currentIndex = signal(0);
+    private timerId: any;
+
+    // 3. Computed signal for the template
+    readonly currentImage = computed(() => this.images[this.currentIndex()]);
+    readonly currentLink = computed(() => this.links[this.currentIndex()]);
+
+    ngOnInit() {
+      this.startSwitching();
+              this.chartInit();
+    }
+
+    ngOnDestroy(): void {
+            if (this.timerId) clearInterval(this.timerId);
+    }
+
+  startSwitching() {
+    this.timerId = setInterval(() => {
+      this.currentIndex.update(idx => (idx + 1) % this.images.length);
+    }, 5000); // 5000ms = 5 seconds
+  }
 
     options: any;
     chartInit(){
@@ -66,10 +105,6 @@ export class HomeComponent implements OnInit {
       constructor() {
         }
 
-      ngOnInit(): void {
-        this.chartInit();
-      }
-
   //section 2 data
 
   start = 190;
@@ -93,6 +128,17 @@ export class HomeComponent implements OnInit {
   weight : string = "";
   weightData: Array<Weight> = [
     {date: '1/1/26', weight: '200', },
+    {date: '1/3/26', weight: '199', },
+    {date: '1/5/26', weight: '197', },
+    {date: '1/7/26', weight: '196', },
+    {date: '1/13/26', weight: '197', },
+    {date: '1/17/26', weight: '195', },
+    {date: '1/21/26', weight: '193', },
+    {date: '1/27/26', weight: '191', },
+    {date: '1/31/26', weight: '192', },
+    {date: '2/1/26', weight: '191', },
+    {date: '2/12/26', weight: '190', },
+    {date: '3/1/26', weight: '189', },
   ];
 
   handleClick() {
