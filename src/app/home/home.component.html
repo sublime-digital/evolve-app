@@ -3,37 +3,19 @@
     <p>
     <div class="row">
 
-        <div class="col-md-4">
-          <div class="card card__overlay">
-          <div class="card-header">
-            <h5 class="h5">Enter Today's Weight</h5>
-          </div>
-          <div class="card-body" style="min-height: 120px;max-height: 140px;">
-            <input type='text'[(ngModel)]='date' placeholder='Date'>
-            <input type='text'[(ngModel)]='weight' placeholder="Today's Weight">
-            <p></p>
-            <button type="button" class="btn btn-info" style="background-color:brown;color:white" (click)='handleClick()'>Add</button>
-          </div>
-          </div>
-
-          <p></p>
-
-          <div class="card advert">
-            <div class="card-header">
-              <h5 class="h5">Advertisement</h5>
-            </div>
-                        <div>
-              <a [href]="currentLink()">
-                <div class="image-frame">
-                  <img [src]="currentImage()" alt="Adverts" class="fade-in">
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
         <div class="col-md-5">
+          <div class="card card__overlay">
+            <div class="card-header">
+              <h5 class="h5">Enter Today's Weight</h5>
+            </div>
+            <div class="card-body" style="min-height: 120px;max-height: 140px;">
+              <input type='text'[(ngModel)]='date' placeholder='Date'>
+              <input type='text'[(ngModel)]='weight' placeholder="Today's Weight">
+              <p></p>
+              <button type="button" class="btn btn-info" style="background-color:brown;color:white" (click)='handleClick()'>Add</button>
+            </div>
+          </div>
+          <p></p>
           <div class="card">
             <div class="card-header">
               <h5>Weight Grid</h5>
@@ -58,7 +40,7 @@
                       </td>
                       <td>
                   <ul>
-                  <li *ngFor = "let line of weightData let i = index">
+                  <li *ngFor = "let line of weightData let i = index" style="color:brown;">
                       {{line.weight}}
                   </li>
                 </ul>
@@ -72,9 +54,21 @@
                     </tr>
                   </tbody>
                 </table>
+                  <button type="button" class="btn btn-info" style="background-color:brown;color:white" (click)='clearData()'>Clear</button>
               </div>
-            </div>
+          </div>
+        </div>
 
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="h5">Weight Chart</h5>
+            </div>
+            <div class="card-body" style="min-height: 300px;max-height: 700px;">
+              <p><div echarts [options]="options" class="demo-chart"></div>
+            </div>
+          </div>
             <p></p>
 
           <div class="card">
@@ -84,19 +78,23 @@
             <div class="card-body" style="min-height: 150px;max-height: 100px;">
               <h5>Don't give up on your dreams</h5>
             </div>
-            </div>
+          </div>
         </div>
 
 
         <div class="col-lg-3">
-          <div class="card">
+          <div class="card advert">
             <div class="card-header">
-              <h5 class="h5">Weight Chart</h5>
+              <h5 class="h5">Advertisement</h5>
             </div>
-            <div class="card-body" style="min-height: 300px;max-height: 700px;">
-              <p><div echarts [options]="options" class="demo-chart"></div>
+                        <div>
+              <a [href]="currentLink()">
+                <div class="image-frame">
+                  <img [src]="currentImage()" alt="Adverts" class="fade-in">
+                </div>
+              </a>
             </div>
-            </div>
+          </div>
           </div>
     </div>
 <p>

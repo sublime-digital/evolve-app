@@ -18,7 +18,7 @@ interface Goal {
 
 export class HomeComponent implements OnInit, OnDestroy {
 
-    private images = [
+  private images = [
       '../../assets/adverts/advert001.png',
       '../../assets/adverts/advert002.png',
       '../../assets/adverts/advert003.png',
@@ -44,18 +44,23 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
       this.startSwitching();
-              this.chartInit();
+        // 1. Load data when the component starts
+      const savedData = localStorage.getItem('evolve_weight_log');
+      if (savedData) {
+        this.weightData = JSON.parse(savedData);
+      }
+      this.chartInit();
     }
 
     ngOnDestroy(): void {
             if (this.timerId) clearInterval(this.timerId);
     }
 
-  startSwitching() {
-    this.timerId = setInterval(() => {
-      this.currentIndex.update(idx => (idx + 1) % this.images.length);
-    }, 5000); // 5000ms = 5 seconds
-  }
+    startSwitching() {
+      this.timerId = setInterval(() => {
+        this.currentIndex.update(idx => (idx + 1) % this.images.length);
+      }, 5000); // 5000ms = 5 seconds
+    }
 
     options: any;
     chartInit(){
@@ -102,8 +107,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                 };
     };
 
-      constructor() {
-        }
+    constructor() {}
 
   //section 2 data
 
@@ -147,11 +151,17 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.weight = '';
   }
 
+  clearData() {
+    this.weightData = [];
+      this.chartInit();
+  }
+
   addWeight(date: string, weight: string): void {
     this.weightData.push({
       date: date,
       weight: weight,
     });
+    localStorage.setItem('evolve_food_log', JSON.stringify(this.goalData));
     this.chartInit();
     this.current = parseInt(weight);
     this.lost = this.start - this.current;
