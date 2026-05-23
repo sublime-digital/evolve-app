@@ -27,9 +27,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     ];
 
   private links = [
+      "https://www.youtube.com/@AllDay-Foodie",
       "/",
-      "/",
-      "/",
+      "https://www.patreon.com/plants_and_poetry/shop/zenfit-spinning-classes-10-videos-1750922",
       "/",
       "/",
     ];
