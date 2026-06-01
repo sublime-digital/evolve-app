@@ -10,7 +10,7 @@ import { FoodsComponent } from './foods/foods.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LibraryComponent } from './library/library.component';
 import { NgxEchartsModule } from 'ngx-echarts';
-import { TipsComponent } from './tips/tips.component';
+import { VidstreamComponent } from './vidstream/vidstream.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { TipsComponent } from './tips/tips.component';
     FoodsComponent,
     SettingsComponent,
     LibraryComponent,
-    TipsComponent
+    VidstreamComponent
   ],
   imports: [
     BrowserModule,

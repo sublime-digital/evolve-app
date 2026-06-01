@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TipsComponent } from './tips.component';
+import { TipsComponent } from './vidstream.component';
 
 describe('TipsComponent', () => {
   let component: TipsComponent;

@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { FoodsComponent } from './foods/foods.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LibraryComponent } from './library/library.component';
-import { TipsComponent } from './tips/tips.component';
+import { VidstreamComponent } from './vidstream/vidstream.component';
 
 
 const routes: Routes = [
@@ -15,10 +15,10 @@ const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'tasks', component: TasksComponent },
 { path: 'home', component: HomeComponent },
-{ path: 'tips', component: TipsComponent },
+{ path: 'vids', component: VidstreamComponent },
 { path: 'foods', component: FoodsComponent },
 { path: 'settings', component: SettingsComponent },
-{ path: 'library', component: LibraryComponent }
+{ path: 'coaching', component: LibraryComponent }
 
 
 ];
